@@ -154,7 +154,7 @@ Fastswitch:
 ImpossibleChat:
   # Do you want to enable the ImpossibleChat check
   # Disabled by default as some servers might allow auto-chat modifications.
-  enabled: false
+  enabled: true
   # Violation before AACAdditionPro starts to cancel the messages.
   # Set this to 0 to never cancel messages.
   cancel_vl: 2
@@ -241,13 +241,13 @@ Inventory:
 KillauraEntity:
   # Do you want to enable the KillauraEntity check
   # Disabled by default as this check is currently rewritten.
-  enabled: false
+  enabled: true
   # Enable this to only spawn an entity if requested by a command.
   # In order to use the command you are required to set this to true.
   # The entity will remain invisible until the command is issued.
   #
   # Please be aware that this will allow some bypasses.
-  on_command: false
+  on_command: true
   # If enabled AACAdditionPro will try to create entities of already online players.
   # If you enable this and only one player is online he will not see his entity in the tablist.
   prefer_online_profiles: true
@@ -423,7 +423,7 @@ PacketAnalysis:
 Pingspoof:
   # Do you want to enable the Pingspoof check
   # Disabled by default as this is a legacy check that will be replaced by PacketAnalysis.
-  enabled: false
+  enabled: true
   # This is the ping-offset. Increase if you have false positives.
   ping_offset: 3.0
   # If the measured real-ping of a player is higher than this, he will be ignored
@@ -543,7 +543,7 @@ Skinblinker:
 # This is safe to enable, just make sure that you configure this check for your own needs.
 Teaming:
   # Do you want to enable the Teaming check
-  enabled: false
+  enabled: true
   # How much delay should be between the check-waves
   # This must be below 15000 milliseconds.
   # Measured in milliseconds.
@@ -612,7 +612,7 @@ ClientControl:
   # 1.13.2 SUPPORT NOT YET VERIFIED! PLEASE TEST BEFORE USING THIS ON A PRODUCTIVE SERVER.
   5zig:
     # Do you want to enable 5zig-Control
-    enabled: false
+    enabled: true
     # This mod provides a method to disable parts of it.
     # Set the corresponding value to true if you want to block a part of the mod
     disable:
@@ -653,7 +653,7 @@ ClientControl:
   # This is a clientsided spoof, meaning that your plugins are able to get the correct health.
   DamageIndicator:
     # Do you want to enable DamageIndicators - countermeasure
-    enabled: false
+    enabled: true
     # Spoof the health of the following entity categories.
     spoof:
       players: true
@@ -666,7 +666,7 @@ ClientControl:
   Forge:
     # Do you want to enable Forge-Control
     # This cannot be blocked; I recommend to kick if desired
-    enabled: false
+    enabled: true
     commands_on_detection:
       - "aacstaffnotify {player} in {world} uses Forge"
 
@@ -679,7 +679,7 @@ ClientControl:
   # If enabled this ClientControl will override the config options of the LabyModAPI plugin.
   LabyMod:
     # Do you want to enable LabyMod-Control
-    enabled: false
+    enabled: true
     # This mod provides a method to disable parts of it.
     # Set the corresponding value to true if you want to block a part of the mod
     disable:
@@ -727,7 +727,7 @@ ClientControl:
   LiteLoader:
     # Do you want to enable LiteLoader-Control
     # This cannot be blocked; I recommend to kick if desired
-    enabled: false
+    enabled: true
     commands_on_detection:
       - "aackick {player} LiteLoader"
 
@@ -737,7 +737,7 @@ ClientControl:
   # Not compatible with 1.13.2 as this only covers old LabyMod versions.
   OldLabyMod:
     # Do you want to enable OldLabyMod-Control
-    enabled: false
+    enabled: true
     # This mod provides a method to disable parts of it.
     # Set the corresponding value to true if you want to block a part of the mod
     disable:
@@ -779,7 +779,7 @@ ClientControl:
   # 1.13.2 SUPPORT NOT YET VERIFIED! PLEASE TEST BEFORE USING THIS ON A PRODUCTIVE SERVER.
   PXMod:
     # Do you want to enable PXMod-Control
-    enabled: false
+    enabled: true
     commands_on_detection:
       - "aackick {player} PXMod"
 
@@ -789,7 +789,7 @@ ClientControl:
   # NOT COMPATIBLE WITH MINECRAFT 1.13 YET -> CLIENTCONTROL WILL AUTODISABLE ON 1.13.2
   Schematica:
     # Do you want to enable Schematica-Control
-    enabled: false
+    enabled: true
     # This mod provides a method to disable parts of it.
     # Set the corresponding value to true if you want to block a part of the mod
     disable:
@@ -800,7 +800,7 @@ ClientControl:
       # of the full WorldDownloader mod.
       save: true
       # This allows to load a schematic on your server for printing or a hologram.
-      load: false
+      load: true
       # The mod cannot be detected, just disabled
 
   # Vape is a very popular ghost-client, often seen in ranked pvp gameplay and optimized to be especially hard to find
@@ -810,7 +810,7 @@ ClientControl:
   # NOT COMPATIBLE WITH MINECRAFT 1.13 AS THE BACKDOOR DEPENDS ON CODE THAT HAS CHANGED DRAMATICALLY IN 1.13
   Vape:
     # Do you want to enable Vape-Control
-    enabled: false
+    enabled: true
     commands_on_detection:
       - "ban {player} Illegal client modification"
 
@@ -829,9 +829,9 @@ ClientControl:
     allowedVersions:
       '1.8': true
       # 1.9 is not officially supported by this plugin. Issues can occur.
-      '1.9': false
+      '1.9': true
       # 1.10 is not officially supported by this plugin. Issues can occur.
-      '1.10': false
+      '1.10': true
       '1.11': true
       '1.12': true
       '1.13': true
@@ -839,13 +839,13 @@ ClientControl:
   # WorldDownloader is a popular modification to get the maps of a server
   WorldDownloader:
     # Do you want to enable WorldDownloader-Control
-    enabled: false
+    enabled: true
     # This mod provides a method to disable it.
     # Set the value to true if you want to block the mod
     # THIS IS CURRENTLY IN BETA. PLEASE TEST BEFORE USING IT ON A PRODUCTIVE SERVER!
     disable: true
     commands_on_detection:
-      - "aackick {player} WorldDownloader"
+      - "aackick {player} Usage of WorldDownloader"
 
 
 # ------------------------------------------------------------------------------------------------------------------- #
@@ -860,7 +860,7 @@ ClientControl:
 # This can be useful if you want to create a custom message or just hide your actual setup.
 BrandHider:
   # Do you want to enable the BrandHider
-  enabled: false
+  enabled: true
   # This is the replacement text for the brand.
   # You can use the character & for color codes and all placeholders that are available in normal checks
   brand: "Some Spigot"
@@ -874,7 +874,7 @@ BrandHider:
 # It activates automatically on restart and after that in a 12 hour cycle.
 LogBot:
   # Do you want to enable the LogBot
-  enabled: false
+  enabled: true
   # After how many days should AAC logs be deleted
   # Set to -1 to disable
   AAC: 10
@@ -899,6 +899,6 @@ Verbose:
   file: true
   # Should players be able to get verbose messages if they have the aac.verbose permission
   # Players can toggle the verbose output with the command /aacadditionpro verbose
-  players: false
+  players: true
   # Should the verbose output be logged in the console (very spammy, only recommended for testing purposes)
-  console: false
+  console: true
